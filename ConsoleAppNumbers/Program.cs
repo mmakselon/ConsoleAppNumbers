@@ -18,7 +18,7 @@ namespace ConsoleAppNumbers
                 count++;
                 Console.WriteLine("Odgadnij liczbę z zakresu 0-100:");
 
-                var number = Number();
+                var number = GetNumber();
                 CheckNumber(number);
 
 
@@ -40,7 +40,7 @@ namespace ConsoleAppNumbers
 
         }
 
-        private static int Number()
+        private static int GetNumber()
         {
             if (!int.TryParse(Console.ReadLine(), out int result))
                 Console.WriteLine("Podano nieprawidłową wartość.");
