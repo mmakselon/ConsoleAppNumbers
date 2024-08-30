@@ -43,7 +43,10 @@ namespace ConsoleAppNumbers
         private static int GetNumber()
         {
             if (!int.TryParse(Console.ReadLine(), out int result))
+            {
                 Console.WriteLine("Podano nieprawidłową wartość.");
+                result = -1;
+            }
 
             return result;
         }
@@ -51,7 +54,7 @@ namespace ConsoleAppNumbers
         private static void CheckNumber(int number)
         {
             if (number < 0 || number > 100)
-                Console.WriteLine("Podana liczba jest spoza dopuszczalnego zakresu.");
+                Console.WriteLine("Podana liczba jest spoza dopuszczalnego zakresu.Spróbuj jeszcze raz");
         }
 
 
